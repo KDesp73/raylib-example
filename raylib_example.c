@@ -2,9 +2,6 @@
 #include "raymath.h"
 #include <math.h>
 
-#define CLIB_IMPLEMENTATION
-#include "clib.h"
-
 #define POINT_RADIUS 15.f
 #define STARTING_OFFSET 100
 #define TARGET_FPS 60
@@ -25,9 +22,6 @@ typedef enum {
 } PointColor ;
 
 int main(int argc, char** argv){
-    clib_shift_args(&argc, &argv);
-    INFO("Started...");
-
     InitWindow(1600, 900, "Raylib Test");
     SetTargetFPS(TARGET_FPS);
     int w = GetScreenWidth();
